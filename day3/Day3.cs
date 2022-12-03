@@ -25,9 +25,9 @@ public class Day3 {
             totalGroupPriority += Priority(CommonGroupChar(g));
         }
  
-        Console.WriteLine("Answer Day 3");
+        Console.WriteLine("Solution Day 3");
         Console.WriteLine($"Part 1: {totalPriority}");
-        Console.WriteLine($"Part 1: {totalGroupPriority}");
+        Console.WriteLine($"Part 2: {totalGroupPriority}");
     }
 
     private char CommonChar(string a, string b) {

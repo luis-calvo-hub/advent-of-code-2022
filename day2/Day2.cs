@@ -17,7 +17,7 @@ public class Day2 {
             totalScorePart2 += score;
         }
 
-        Console.WriteLine("Answer Day 2");
+        Console.WriteLine("Solution Day 2");
         Console.WriteLine($"Part 1: {totalScorePart1}");
         Console.WriteLine($"Part 2: {totalScorePart2}");
     }

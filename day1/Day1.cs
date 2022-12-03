@@ -19,7 +19,7 @@ public class Day1 {
             totalLastThreeElves += elfTotalCalories[i];
         }
 
-        Console.WriteLine("Answer Day 1");
+        Console.WriteLine("Solution Day 1");
         Console.WriteLine($"Part 1: {elfTotalCalories[^1]}");
         Console.WriteLine($"Part 2: {totalLastThreeElves}");
     }
