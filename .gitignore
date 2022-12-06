@@ -1,3 +1,7 @@
+
+/[Oo]bj/
+/obj/
+
 # Visual Studio cache directory
 .vs/
 

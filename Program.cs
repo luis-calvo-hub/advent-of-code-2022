@@ -3,6 +3,6 @@
 
 public class Program {
     static void Main(string[] args) {
-        new Day5();
+        new Day6();
     }
 }

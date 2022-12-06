@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\luis-calvo\\advent-of-code-2022\\advent-of-code-2022.csproj": {}
+    "C:\\Projects\\foxbia\\advent-of-code-2022\\advent-of-code-2022.csproj": {}
   },
   "projects": {
-    "D:\\projects\\luis-calvo\\advent-of-code-2022\\advent-of-code-2022.csproj": {
+    "C:\\Projects\\foxbia\\advent-of-code-2022\\advent-of-code-2022.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\luis-calvo\\advent-of-code-2022\\advent-of-code-2022.csproj",
+        "projectUniqueName": "C:\\Projects\\foxbia\\advent-of-code-2022\\advent-of-code-2022.csproj",
         "projectName": "advent-of-code-2022",
-        "projectPath": "D:\\projects\\luis-calvo\\advent-of-code-2022\\advent-of-code-2022.csproj",
-        "packagesPath": "C:\\Users\\itslu\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\luis-calvo\\advent-of-code-2022\\obj\\",
+        "projectPath": "C:\\Projects\\foxbia\\advent-of-code-2022\\advent-of-code-2022.csproj",
+        "packagesPath": "C:\\Users\\luisc\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\foxbia\\advent-of-code-2022\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\itslu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luisc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
