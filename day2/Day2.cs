@@ -33,7 +33,7 @@ public class Day2 {
             "CX" => 1 + 6,
             "CY" => 2 + 0,
             "CZ" => 3 + 3,
-            _ => 0
+            _ => -1
         };
     }
     private int CalculateScorePart2(string s) {
@@ -47,7 +47,7 @@ public class Day2 {
             "CX" => 2 + 0,
             "CY" => 3 + 3,
             "CZ" => 1 + 6,
-            _ => 0
+            _ => -1
         };
     }
 }   

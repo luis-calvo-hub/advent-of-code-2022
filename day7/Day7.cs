@@ -8,6 +8,7 @@ public class Day7 {
         Dir cd = new();
         cd.name = "root";
         Dir root = cd;
+        
         foreach(string command in inputLines) {
             if(command.Equals("$ cd ..") && cd.parent != null) {
                 cd = cd.parent;
