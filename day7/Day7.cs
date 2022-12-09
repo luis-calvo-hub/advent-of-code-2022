@@ -1,15 +1,37 @@
 public class Day7 {
+    List<Dir> directoriesCache = new();
     public Day7() {
         string input = System.IO.File.ReadAllText("day7/input.txt");
-        string[] inputLines = input.Split("\r\n");
+        string[] inputCommands = input.Split("\r\n");
 
-        List<Dir> directoriesCache = new();
+        Dir root = CreateDirectories(inputCommands);
 
-        Dir cd = new();
-        cd.name = "root";
-        Dir root = cd;
+        int answer1 = 0;
+        foreach(Dir d in directoriesCache) {
+            if(d.size < 100000) {
+                answer1 += d.size;
+            }
+        }
+
+        Dir answer2 = root;
+        int requiredSpace = 30000000 - (70000000 - root.size);
+        foreach(Dir d in directoriesCache) {
+            if(d.size < answer2.size && d.size > requiredSpace) {
+                answer2 = d;
+            }
+        }
         
-        foreach(string command in inputLines) {
+        Console.WriteLine($"Solution Day 7");
+        Console.WriteLine($"Part 1: {answer1}");
+        Console.WriteLine($"Part 2: {answer2.size}");
+    }
+
+    private Dir CreateDirectories(string[] inputCommands) {
+        Dir root = new();
+        root.name = "root";
+        Dir cd = root;
+        
+        foreach(string command in inputCommands) {
             if(command.Equals("$ cd ..") && cd.parent != null) {
                 cd = cd.parent;
             }
@@ -48,25 +70,7 @@ public class Day7 {
                 }
             }
         }
-
-        int answer1 = 0;
-        foreach(Dir d in directoriesCache) {
-            if(d.size < 100000) {
-                answer1 += d.size;
-            }
-        }
-
-        Dir answer2 = root;
-        int requiredSpace = 30000000 - (70000000 - root.size);
-        foreach(Dir d in directoriesCache) {
-            if(d.size < answer2.size && d.size > requiredSpace) {
-                answer2 = d;
-            }
-        }
-        
-        Console.WriteLine($"Solution Day 7");
-        Console.WriteLine($"Part 1: {answer1}");
-        Console.WriteLine($"Part 2: {answer2.size}");
+        return root;
     }
 
     private class Dir {

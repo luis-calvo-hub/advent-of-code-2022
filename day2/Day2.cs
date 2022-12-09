@@ -50,4 +50,4 @@ public class Day2 {
             _ => -1
         };
     }
-}   
+}
