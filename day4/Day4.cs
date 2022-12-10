@@ -10,10 +10,10 @@ public class Day4
             string[] elf1 = elfPair[0].Split("-");
             string[] elf2 = elfPair[1].Split("-");
             ElfTaskPair pair = new() {
-              elf1First = int.Parse(elf1[0]),
-              elf1Last = int.Parse(elf1[1]),
-              elf2First = int.Parse(elf2[0]),
-              elf2Last = int.Parse(elf2[1]),
+                elf1First = int.Parse(elf1[0]),
+                elf1Last = int.Parse(elf1[1]),
+                elf2First = int.Parse(elf2[0]),
+                elf2Last = int.Parse(elf2[1]),
             };
             tasks.Add(pair);
         }

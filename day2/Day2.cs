@@ -3,23 +3,19 @@ public class Day2 {
         string input = File.ReadAllText("day2/input.txt").Replace(" ", "").Replace("\r\n", ",");
         string[] matches = input.Split(',');
 
-        int totalScorePart1 = 0;
-        for (int i = 0; i < matches.Length; i++) {
-            int score = 0;
-            score += CalculateScorePart1(matches[i]);
-            totalScorePart1 += score;
-        }
-
-        int totalScorePart2 = 0;
-        for (int i = 0; i < matches.Length; i++) {
-            int score = 0;
-            score += CalculateScorePart2(matches[i]);
-            totalScorePart2 += score;
-        }
-
         Console.WriteLine("Solution Day 2");
-        Console.WriteLine($"Part 1: {totalScorePart1}");
-        Console.WriteLine($"Part 2: {totalScorePart2}");
+        Console.WriteLine($"Part 1: {CalculateScore(matches, CalculateScorePart1)}");
+        Console.WriteLine($"Part 2: {CalculateScore(matches, CalculateScorePart2)}");
+    }
+
+    private int CalculateScore(string[] matches, System.Func<string, int> method) {
+        int totalScore = 0;
+        for (int i = 0; i < matches.Length; i++) {
+            int score = 0;
+            score += method(matches[i]);
+            totalScore += score;
+        }
+        return totalScore;
     }
 
     private int CalculateScorePart1(string s) {
