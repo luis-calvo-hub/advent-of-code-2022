@@ -31,7 +31,7 @@ public class Day9 {
                             y = rope[r - 1].y - rope[r].y,
                         };
                         if (Math.Abs(distance.x) > 1 || Math.Abs(distance.y) > 1) {
-                            Vector2 newPos = new(){
+                            Vector2 newPos = new() {
                                 x = Math.Sign(distance.x),
                                 y = Math.Sign(distance.y)
                             };
