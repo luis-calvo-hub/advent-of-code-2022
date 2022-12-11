@@ -66,18 +66,21 @@ public class Day10 {
         for (int i = 0; i < instructions.Count; i++) {
             int? result = ProcessInstruction(instructions[i]);
             if(result != null) {
+                cycle += 2;
+                frameBuffer.Add(Draw(frameBuffer.Count, register));
+                frameBuffer.Add(Draw(frameBuffer.Count, register));
                 int num = result.Value;
-                frameBuffer.Add(Draw(frameBuffer.Count, register));
-                cycle++;
-                frameBuffer.Add(Draw(frameBuffer.Count, register));
                 register += num;
-                cycle++;
             }
             else {
-                frameBuffer.Add(Draw(frameBuffer.Count, register));
                 cycle++;
+                frameBuffer.Add(Draw(frameBuffer.Count, register));
             }
         }
+        DrawFrameBuffer(frameBuffer);
+    }
+
+    private void DrawFrameBuffer(List<char> frameBuffer) {
         for (int i = 0; i < frameBuffer.Count; i++) {
             if (i != 0 && i % 40 == 0) {
                 Console.WriteLine();
