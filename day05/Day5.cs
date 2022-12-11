@@ -1,5 +1,5 @@
-public class Day05 {
-    public Day05() {
+public class Day5 {
+    public Day5() {
         string input = File.ReadAllText("day5/input.txt");
         List<char> inputCrates = new();
         bool cratesParsed = false;

@@ -1,6 +1,6 @@
-public class Day04
+public class Day4
 {
-    public Day04() {
+    public Day4() {
         string input = File.ReadAllText("day4/input.txt").Replace(",", ".").Replace("\r\n", ",");
         string[] assignments = input.Split(",");
         List<ElfTaskPair> tasks = new();

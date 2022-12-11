@@ -1,5 +1,5 @@
-public class Day06 {
-    public Day06() {
+public class Day6 {
+    public Day6() {
         string input = File.ReadAllText("day6/input.txt");
 
         Console.WriteLine($"Solution Day 6");

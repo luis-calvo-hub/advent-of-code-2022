@@ -1,5 +1,5 @@
-public class Day03 {
-    public Day03() {
+public class Day3 {
+    public Day3() {
         string input = File.ReadAllText("day3/input.txt").Replace("\r\n", ",");
         string[] rucksacks = input.Split(',');
 
